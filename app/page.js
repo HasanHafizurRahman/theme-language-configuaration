@@ -3,6 +3,7 @@ import Loading from "@/components/Loading";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { FaShoppingCart } from "react-icons/fa";
 import { toast } from "react-toastify";
 
@@ -27,6 +28,8 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
   const [cartCount, setCartCount] = useState(0);
 
+  const { t } = useTranslation();
+
   useEffect(() => {
     // Simulate delay using setTimeout
     const delay = setTimeout(() => {
@@ -49,7 +52,7 @@ export default function Home() {
     // Increment cart count when user clicks on "Add to Cart" button
     setCartCount((prevCount) => prevCount + 1);
     // Show toast notification
-    toast.success("Item added to cart!");
+    toast.success(`${t('page.itemAdded')}`);
   };
 
   return (
@@ -82,7 +85,7 @@ export default function Home() {
                     <div className="flex justify-end">
                     <button onClick={handleAddToCart} className="mt-4 flex items-center bg-primary-26 text-white px-4 py-2 rounded-md">
                       <FaShoppingCart className="mr-2" />
-                      Add to Cart
+                      {t('page.addToCart')}
                     </button>
                     </div>
                   </div>
