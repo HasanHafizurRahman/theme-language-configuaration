@@ -7,7 +7,7 @@ export default function Navbar({ cartCount }) {
   const { t } = useTranslation();
 
   return (
-    <nav className="bg-primary-38 text-white py-4 flex justify-between px-5">
+    <nav className="bg-primary-28 text-white py-4 flex justify-between px-5">
       <div className='flex gap-[35rem]'>
         <div><h2 className="font-bold">{t('navbar.title')}</h2></div>
         <div><LanguageSelector /></div>

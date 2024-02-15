@@ -6,6 +6,7 @@
     },
     "page": {
       "addToCart": "Add to Cart",
-      "itemAdded": "Item added to cart!"
+      "itemAdded": "Item added to cart!",
+      "title": "Welcome to our Fake Store !"
     }
   }

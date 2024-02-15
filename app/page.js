@@ -57,11 +57,11 @@ export default function Home() {
 
   return (
     <>
-      <div className="mb-4">
+      <div className="">
         <Navbar cartCount={cartCount} />
       </div>
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
-
+      <main className="flex min-h-screen flex-col items-center justify-between p-4">
+<h2 className="text-primary-19 font-bold mb-14">{t('page.title')}</h2>
         {loading ? (
           <Loading />
         ) : (
