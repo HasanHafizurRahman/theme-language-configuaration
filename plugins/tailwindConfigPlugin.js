@@ -76,7 +76,7 @@ export const tailwindConfigs = plugin.withOptions(
       });
       addBase({
         h1: {
-          "@apply text-[2.125rem] leading-[2.625rem]": {},
+          "@apply text-[2.5rem]": {},
         },
         h2: {
           "@apply text-2xl": {},

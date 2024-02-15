@@ -1,17 +1,16 @@
 "use client"
-import { useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 
 export default function Navbar({ cartCount }) {
   return (
-    <nav className="bg-gray-800 text-white p-4 flex justify-between">
+    <nav className="bg-primary-38 text-white py-4 flex justify-between px-5">
       <div>
-        <h1 className="text-xl font-bold">My Online Store</h1>
+        <h2 className="font-bold">My Online Store</h2>
       </div>
       <div>
-        <div className="relative">
+        <div className="relative pt-1">
           <FaShoppingCart className="text-2xl cursor-pointer" />
-          <span className="absolute top-0 right-0 bg-red-500 text-white rounded-full h-5 w-5 flex items-center justify-center text-xs">
+          <span className="absolute bottom-4 left-4 bg-primary-19 font-bold text-primary-28 rounded-full h-5 w-5 flex items-center justify-center text-xs">
             {cartCount}
           </span>
         </div>

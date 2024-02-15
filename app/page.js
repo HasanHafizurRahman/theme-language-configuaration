@@ -3,6 +3,8 @@ import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
+import { toast } from "react-toastify";
+
 
 // Function to fetch data from the FakeStore API
 async function fetchFakeStoreData() {
@@ -40,6 +42,16 @@ export default function Home() {
   const handleAddToCart = () => {
     // Increment cart count when user clicks on "Add to Cart" button
     setCartCount((prevCount) => prevCount + 1);
+    // Show toast notification
+    toast.success("Item added to cart!", {
+      position: "bottom-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
   };
 
   return (
@@ -60,10 +72,10 @@ export default function Home() {
         <div key={product.id} className="bg-white rounded-lg shadow-md overflow-hidden">
           <Image src={product.image} alt={product.title} width={400} height={200} />
           <div className="p-4">
-            <h2 className="text-lg font-semibold mb-2">{product.title}</h2>
-            <p className="text-gray-600 mb-4 truncate">{product.description}</p>
-            <p className="text-blue-500 font-semibold">{product.price}</p>
-            <button onClick={handleAddToCart} className="mt-4 flex items-center bg-blue-500 text-white px-4 py-2 rounded-md">
+            <h3 className="font-semibold mb-2">{product.title}</h3>
+            <p className="text-primary-34 mb-4 truncate">{product.description}</p>
+            <p className="text-primary-26 font-semibold">{product.price}</p>
+            <button onClick={handleAddToCart} className="mt-4 flex items-center bg-primary-26 text-white px-4 py-2 rounded-md">
                       <FaShoppingCart className="mr-2" />
                       Add to Cart
                     </button>
@@ -76,8 +88,8 @@ export default function Home() {
       {/* Render posts from JSONPlaceholder API */}
       {jsonPlaceholderData.map((post) => (
         <div key={post.id} className="bg-white rounded-lg shadow-md p-6 mb-6">
-          <h2 className="text-xl font-semibold mb-2">{post.title}</h2>
-          <p className="text-gray-600">{post.body}</p>
+          <h3 className="font-semibold mb-2">{post.title}</h3>
+          <p className="text-primary-34">{post.body}</p>
         </div>
       ))}
     </div>
