@@ -1,3 +1,6 @@
+const { tailwindConfigs } = require('./plugins/tailwindConfigPlugin');
+import colorThemes from "./app/theme.json"
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -14,5 +17,7 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    tailwindConfigs({ colorThemes })
+  ],
 };
