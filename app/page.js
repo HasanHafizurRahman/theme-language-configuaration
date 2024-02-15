@@ -81,7 +81,7 @@ export default function Home() {
                   <div className="p-4">
                     <h3 className="font-semibold mb-2">{product.title}</h3>
                     <p className="text-primary-34 mb-4 truncate">{product.description}</p>
-                    <p className="text-primary-26 font-semibold">{product.price}</p>
+                    <p className="text-primary-26 font-semibold">{product.price} $</p>
                     <div className="flex justify-end">
                     <button onClick={handleAddToCart} className="mt-4 flex items-center bg-primary-26 text-white px-4 py-2 rounded-md">
                       <FaShoppingCart className="mr-2" />
