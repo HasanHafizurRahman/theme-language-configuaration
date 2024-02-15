@@ -43,15 +43,13 @@ export default function Home() {
           console.error("Error fetching data:", error);
           setLoading(false);
         });
-    }, 2000); // Adjust delay time as needed
+    }, 2000);
 
-    return () => clearTimeout(delay); // Cleanup setTimeout on unmount
+    return () => clearTimeout(delay);
   }, []);
 
   const handleAddToCart = () => {
-    // Increment cart count when user clicks on "Add to Cart" button
     setCartCount((prevCount) => prevCount + 1);
-    // Show toast notification
     toast.success(`${t('page.itemAdded')}`);
   };
 
@@ -60,13 +58,12 @@ export default function Home() {
       <div className="">
         <Navbar cartCount={cartCount} />
       </div>
-      <main className="flex min-h-screen flex-col items-center justify-between p-4">
-<h2 className="text-primary-19 font-bold mb-14">{t('page.title')}</h2>
+      <main className="p-4">
+        <h2 className="text-primary-19 text-center font-bold mb-14">{t('page.title')}</h2>
         {loading ? (
           <Loading />
         ) : (
           <>
-
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               {/* Render products from FakeStore API */}
               {fakeStoreData.map((product) => (
@@ -83,10 +80,10 @@ export default function Home() {
                     <p className="text-primary-34 mb-4 truncate">{product.description}</p>
                     <p className="text-primary-26 font-semibold">{product.price} $</p>
                     <div className="flex justify-end">
-                    <button onClick={handleAddToCart} className="mt-4 flex items-center bg-primary-26 text-white px-4 py-2 rounded-md">
-                      <FaShoppingCart className="mr-2" />
-                      {t('page.addToCart')}
-                    </button>
+                      <button onClick={handleAddToCart} className="mt-4 flex items-center bg-primary-26 text-white px-4 py-2 rounded-md">
+                        <FaShoppingCart className="mr-2" />
+                        {t('page.addToCart')}
+                      </button>
                     </div>
                   </div>
                 </div>
