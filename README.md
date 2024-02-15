@@ -22,7 +22,7 @@ Clone the repository:
 
 bash
 Copy code
-git clone https://github.com/your-username/my-online-store.git
+git clone https://github.com/HasanHafizurRahman/theme-language-configuaration.git
 Navigate to the project directory:
 
 bash
@@ -33,10 +33,9 @@ Install dependencies:
 bash
 Copy code
 npm install
-
 Configuration
 Theme Configuration
-The project supports themeing for different different domains. To switch between themes, modify the themeConfig.js file located in the src directory. You can customize colors, typography, and other theme-related settings in this file.
+The project supports theming for different domains. To switch between themes, modify the themeConfig.js file located in the src directory. You can customize colors, typography, and other theme-related settings in this file.
 
 Language Configuration
 The project supports English and Bengali languages. Translations are managed using React-i18next. Add translation files (en.json and bn.json) in the src/locales directory. Each file should contain translations for different sections of the application.
@@ -48,9 +47,7 @@ bash
 Copy code
 npm run dev
 Save to grepper
-
 Open http://localhost:3000 in your web browser to view the application.
-
 
 License
 This project is licensed under the MIT License - see the LICENSE file for details.
