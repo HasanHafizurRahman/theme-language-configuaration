@@ -1,11 +1,16 @@
 "use client"
-import { FaShoppingCart } from "react-icons/fa";
+import { useTranslation } from 'react-i18next';
+import { FaShoppingCart } from 'react-icons/fa';
+import LanguageSelector from './LanguageSelector';
 
 export default function Navbar({ cartCount }) {
+  const { t } = useTranslation();
+
   return (
     <nav className="bg-primary-38 text-white py-4 flex justify-between px-5">
-      <div>
-        <h2 className="font-bold">My Online Store</h2>
+      <div className='flex gap-[35rem]'>
+        <div><h2 className="font-bold">{t('navbar.title')}</h2></div>
+        <div><LanguageSelector /></div>
       </div>
       <div>
         <div className="relative pt-1">
@@ -18,3 +23,4 @@ export default function Navbar({ cartCount }) {
     </nav>
   );
 }
+

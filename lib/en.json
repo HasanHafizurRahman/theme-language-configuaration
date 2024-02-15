@@ -1,0 +1,11 @@
+
+{
+    "navbar": {
+      "title": "My Online Store",
+      "cart": "Cart"
+    },
+    "page": {
+      "addToCart": "Add to Cart",
+      "itemAdded": "Item added to cart!"
+    }
+  }
